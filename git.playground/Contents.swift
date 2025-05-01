@@ -7,3 +7,5 @@
 // ブランチを移動する
 // git checkout ブランチ名
 
+// 保存前の変更を削除する
+// git checkout .
