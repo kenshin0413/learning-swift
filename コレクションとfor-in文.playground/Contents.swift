@@ -47,3 +47,26 @@ let numSet : Set = [0,1,2,3] // 集合もバラバラに出力される
 for i in numSet {
     print(i)
 }
+
+//ゲームの得点比較をしたい
+var a = [Int]()
+var b = [Int]()
+for _ in 1...100 {
+    a.append(Int.random(in: 0...10))
+    b.append(Int.random(in: 0...10))
+}
+print(a)
+print(b)
+
+// どちらの勝利回数が多いか判定してみる
+var aWin = 0
+var bWin = 0
+for i in 0 ..< a.count {
+    if a[i] > b[i] {
+        aWin += 1
+    }else if a[i] < b[i] {
+        bWin += 1
+    }
+}
+// 三項演算子
+print(aWin > bWin ? "Aさんの勝利" : "Bさんの勝利")
